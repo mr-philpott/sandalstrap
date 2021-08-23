@@ -1,5 +1,10 @@
 $settings: (
-    base-theme: "default",
     strict: true,
     utils: true,
+    
+    styles: (
+        base-theme: "default",
+        border-radius: .5rem,
+        
+    ),
 );

@@ -1,5 +1,6 @@
 @use "sass:meta";
 @use "../config" as *;
+@use "./type" as *;
 
 @use "../themes/light";
 @use "../themes/dark";
@@ -17,7 +18,7 @@ $layers: (
     @if index($layers, $name) {
         @return (length($layers) - index($layers, $name)) + 1;
     } @else {
-        @warn 'There is no item "#{$name}" in this list; choose one of: #{$layers}';
+        @error 'There is no item "#{$name}" in this list; choose one of: #{$layers}';
         @return null;
     }
 }
@@ -30,6 +31,24 @@ $layers: (
     };
     @return $result;
 }
+
+// Map Deep Search
+// !!! Finish !!! //
+
+// @function Map-Deep-Search($map, $find) {
+//     $nested: ();
+
+//     @if not Is-Map($map) {@return null; }
+//     @each $key, $val in $map {
+//         @if $key == $find {
+//             @return $val;
+//         } @else if Is-Map($val) {
+//             $nested: append($nested, Map-Deep-Search($val, $find));
+//         }
+//     }
+
+//     @if index($nested, $find)
+// }
 
 // Gets a theme
 $_theme: module-variables(map-get($settings, "base-theme"));

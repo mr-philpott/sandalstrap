@@ -76,11 +76,11 @@ $text-map: (
 // like a error class or a success class, ya know?
 
 // Error / Same as Red in Colors
-$error-darker : hsl(355, 50%, 20%); $err-drkr: $error-darker ;
-$error-dark   : hsl(355, 50%, 29%); $err-drk : $error-dark   ;
-$error        : hsl(355, 50%, 37%); $err     : $error        ;
-$error-light  : hsl(355, 50%, 43%); $err-lgt : $error-light  ;
-$error-lighter: hsl(355, 50%, 55%); $err-lgtr: $error-lighter;
+$error-darker : hsl(355, 50%, 29%); $err-drkr: $error-darker ;
+$error-dark   : hsl(355, 50%, 37%); $err-drk : $error-dark   ;
+$error        : hsl(355, 50%, 43%); $err     : $error        ;
+$error-light  : hsl(355, 50%, 55%); $err-lgt : $error-light  ;
+$error-lighter: hsl(355, 50%, 60%); $err-lgtr: $error-lighter;
 
 // Error Map
 $error-map: (

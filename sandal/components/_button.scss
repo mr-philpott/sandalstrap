@@ -1,5 +1,23 @@
 @use "../utils" as *;
 
+// Common Variables
+$_sizes-large: (
+    width: 10rem,
+    height: 4rem,
+);
+$_size-medium: (
+    width: 10rem,
+    height: 4rem,
+);
+$_size-small: (
+    width: 10rem,
+    height: 4rem,
+);
+$_border-radius: $bradius;
+$_letter-spacing: 0.05rem;
+$_font-weight: bold;
+$_transition-time: .25s;
+
 /// A button for all your button needs
 /// @param {string} $type [secondary] - The type of button as per the theme sheet
 /// @param {string} $size [large] - The size of the button. Can be large, medium, or small
@@ -10,14 +28,44 @@
         width: $size;
     } @else {
         @if $size == "large" {
-            width: 10rem;
-            height: 4rem;
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
         } @else if $size == "medium" {
-            width: 7rem;
-            height: 3rem;
+            width: map-get($_size-medium, $width);
+            height: map-get($_size-medium, $height);
         } @else if $size == "small" {
-            width: 5rem;
-            height: 3rem;
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
+        }
+    }
+
+    background-color: Theme($type);
+    color: Theme("text-light");
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    border-radius: $bradius;
+    transition: background-color .25s;
+
+    &:hover {
+        background-color: Theme("#{$type}-light");
+    }
+}
+
+@mixin Primary-Button() {
+    $type-checked: Check-Types(($type, $size, $outline), ("string", ("string", "number"), "bool"));
+
+    @if nth($type-checked, 2) == "number" {
+        width: $size;
+    } @else {
+        @if $size == "large" {
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
+        } @else if $size == "medium" {
+            width: map-get($_size-medium, $width);
+            height: map-get($_size-medium, $height);
+        } @else if $size == "small" {
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
         }
     }
 
@@ -42,14 +90,14 @@
         width: $size;
     } @else {
         @if $size == "large" {
-            width: 10rem;
-            height: 4rem;
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
         } @else if $size == "medium" {
-            width: 7rem;
-            height: 3rem;
+            width: map-get($_size-medium, $width);
+            height: map-get($_size-medium, $height);
         } @else if $size == "small" {
-            width: 5rem;
-            height: 3rem;
+            width: map-get($_size-large, $width);
+            height: map-get($_size-large, $height);
         }
     }
 
