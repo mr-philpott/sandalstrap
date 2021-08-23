@@ -282,100 +282,164 @@ template {
   display: none;
 }
 
+div:nth-of-type(1) button:nth-of-type(1), div:nth-of-type(1) button:nth-of-type(2), div:nth-of-type(1) button:nth-of-type(3), div:nth-of-type(1) button:nth-of-type(4), div:nth-of-type(2) button:nth-of-type(1), div:nth-of-type(2) button:nth-of-type(2), div:nth-of-type(2) button:nth-of-type(3), div:nth-of-type(2) button:nth-of-type(4), div:nth-of-type(2) button:nth-of-type(5), div:nth-of-type(3) button:nth-of-type(1), div:nth-of-type(3) button:nth-of-type(2), div:nth-of-type(3) button:nth-of-type(3), div:nth-of-type(3) button:nth-of-type(4), div:nth-of-type(3) button:nth-of-type(5) {
+  letter-spacing: 0.05rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  transition: background-color 0.25s, color 0.25s;
+}
+
 div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-div button:nth-of-type(1) {
-  width: 10rem;
-  height: 4rem;
-  background-color: #50636d;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
+div:nth-of-type(1) button:nth-of-type(1) {
+  color: white;
+  background-color: #31aa96;
+}
+div:nth-of-type(1) button:nth-of-type(1):hover {
+  background-color: #4dcbb6;
+  color: white;
+}
+div:nth-of-type(1) button:nth-of-type(2) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
+  color: white;
+  background-color: #31aa96;
 }
-div button:nth-of-type(1):hover {
-  background-color: #5d737e;
+div:nth-of-type(1) button:nth-of-type(2):hover {
+  background-color: #4dcbb6;
+  color: white;
 }
-div button:nth-of-type(2) {
-  width: 10rem;
-  height: 4rem;
-  background-color: #1c74a0;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
+div:nth-of-type(1) button:nth-of-type(3) {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: normal;
+  color: white;
+  background-color: #31aa96;
+}
+div:nth-of-type(1) button:nth-of-type(3):hover {
+  background-color: #4dcbb6;
+  color: white;
+}
+div:nth-of-type(1) button:nth-of-type(4) {
+  color: white;
+  background-color: #31aa96;
+}
+div:nth-of-type(1) button:nth-of-type(4):hover {
+  background-color: #4dcbb6;
+  color: white;
+}
+div:nth-of-type(2) button:nth-of-type(1) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
+  color: white;
+  background-color: #c55016;
 }
-div button:nth-of-type(2):hover {
-  background-color: #2187ba;
+div:nth-of-type(2) button:nth-of-type(1):hover {
+  background-color: #e86e30;
+  color: white;
 }
-div button:nth-of-type(3) {
-  width: 10rem;
-  height: 4rem;
+div:nth-of-type(2) button:nth-of-type(2) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
   background-color: #ba212e;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
 }
-div button:nth-of-type(3):hover {
+div:nth-of-type(2) button:nth-of-type(2):hover {
   background-color: #dd3c49;
+  color: white;
 }
-div button:nth-of-type(4) {
-  width: 10rem;
-  height: 4rem;
+div:nth-of-type(2) button:nth-of-type(3) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
   background-color: #daaf2f;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
 }
-div button:nth-of-type(4):hover {
+div:nth-of-type(2) button:nth-of-type(3):hover {
   background-color: #e3c25f;
+  color: white;
 }
-div button:nth-of-type(5) {
-  width: 10rem;
-  height: 4rem;
+div:nth-of-type(2) button:nth-of-type(4) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
   background-color: #1c8aa0;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
 }
-div button:nth-of-type(5):hover {
+div:nth-of-type(2) button:nth-of-type(4):hover {
   background-color: #21a1ba;
+  color: white;
 }
-div button:nth-of-type(6) {
-  width: 10rem;
-  height: 4rem;
-  background-color: #1ca069;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
+div:nth-of-type(2) button:nth-of-type(5) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
-}
-div button:nth-of-type(6):hover {
-  background-color: #21ba7a;
-}
-div button:nth-of-type(7) {
-  width: 10rem;
-  height: 4rem;
+  color: white;
   background-color: #1ca069;
-  color: #f7f7ee;
-  letter-spacing: 0.05rem;
-  font-weight: bold;
-  border-radius: 0.5rem;
-  transition: background-color 0.25s;
 }
-div button:nth-of-type(7):hover {
+div:nth-of-type(2) button:nth-of-type(5):hover {
   background-color: #21ba7a;
+  color: white;
+}
+div:nth-of-type(3) button:nth-of-type(1) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0.19rem #e86e30 solid;
+  color: #c55016;
+}
+div:nth-of-type(3) button:nth-of-type(1):hover {
+  background-color: #e86e30;
+  color: white;
+}
+div:nth-of-type(3) button:nth-of-type(2) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0.19rem #dd3c49 solid;
+  color: #ba212e;
+}
+div:nth-of-type(3) button:nth-of-type(2):hover {
+  background-color: #dd3c49;
+  color: white;
+}
+div:nth-of-type(3) button:nth-of-type(3) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0.19rem #e3c25f solid;
+  color: #daaf2f;
+}
+div:nth-of-type(3) button:nth-of-type(3):hover {
+  background-color: #e3c25f;
+  color: white;
+}
+div:nth-of-type(3) button:nth-of-type(4) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0.19rem #21a1ba solid;
+  color: #1c8aa0;
+}
+div:nth-of-type(3) button:nth-of-type(4):hover {
+  background-color: #21a1ba;
+  color: white;
+}
+div:nth-of-type(3) button:nth-of-type(5) {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0.19rem #21ba7a solid;
+  color: #1ca069;
+}
+div:nth-of-type(3) button:nth-of-type(5):hover {
+  background-color: #21ba7a;
+  color: white;
 }/*# sourceMappingURL=style.css.map */

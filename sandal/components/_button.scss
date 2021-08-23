@@ -1,115 +1,67 @@
 @use "../utils" as *;
+@use "../config" as *;
+
+$radius: Map-Deep-Search($settings, "border-radius");
+
+%common {
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    border-radius: $radius;
+    transition: background-color .25s, color .25s;
+}
 
 // Common Variables
-$_sizes-large: (
-    width: 10rem,
-    height: 4rem,
+$_sizes: (
+    large: (
+        padding: 1rem 2rem,
+        font-size: 2rem,
+        font-weight: bold,
+    ),
+    medium: (
+        padding: .75rem 1.5rem,
+        font-size: 1.25rem,
+        font-weight: bold,
+    ),
+    small: (
+        padding: .5rem 1rem,
+        font-size: 0.85rem,
+        font-weight: normal,
+    ),
 );
-$_size-medium: (
-    width: 10rem,
-    height: 4rem,
-);
-$_size-small: (
-    width: 10rem,
-    height: 4rem,
-);
-$_border-radius: $bradius;
-$_letter-spacing: 0.05rem;
-$_font-weight: bold;
-$_transition-time: .25s;
+
 
 /// A button for all your button needs
 /// @param {string} $type [secondary] - The type of button as per the theme sheet
 /// @param {string} $size [large] - The size of the button. Can be large, medium, or small
-@mixin Button($type: "secondary", $size: "large", $outline: false) {
-    $type-checked: Check-Types(($type, $size, $outline), ("string", ("string", "number"), "bool"));
+/// @param {bool} $outline [false] - Determines if the button styles are that of an outline
+@mixin Button(
+    $type: "secondary", 
+    $size: "medium", 
+    $outline: false,
+) {
+    $type-checked: Check-Types(($type, "string"), ($size, ("string", "percent")), ($outline, "bool"));
 
-    @if nth($type-checked, 2) == "number" {
-        width: $size;
-    } @else {
-        @if $size == "large" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
-        } @else if $size == "medium" {
-            width: map-get($_size-medium, $width);
-            height: map-get($_size-medium, $height);
-        } @else if $size == "small" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
+    @if Includes($_sizes, $size) {
+        @each $key, $val in map-get($_sizes, $size) {
+            #{$key}: $val;
         }
+    } @else {
+        
     }
 
-    background-color: Theme($type);
-    color: Theme("text-light");
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    border-radius: $bradius;
-    transition: background-color .25s;
+    @extend %common;
+
+    @if $outline {
+        border: .19rem Theme("#{$type}-light") solid;
+        color: Theme($type);
+    } @else {
+        color: Theme("text-light");
+        background-color: Theme($type);
+    }
 
     &:hover {
         background-color: Theme("#{$type}-light");
-    }
-}
-
-@mixin Primary-Button() {
-    $type-checked: Check-Types(($type, $size, $outline), ("string", ("string", "number"), "bool"));
-
-    @if nth($type-checked, 2) == "number" {
-        width: $size;
-    } @else {
-        @if $size == "large" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
-        } @else if $size == "medium" {
-            width: map-get($_size-medium, $width);
-            height: map-get($_size-medium, $height);
-        } @else if $size == "small" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
-        }
-    }
-
-    background-color: Theme($type);
-    color: Theme("text-light");
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    border-radius: $bradius;
-    transition: background-color .25s;
-
-    &:hover {
-        background-color: Theme("#{$type}-light");
-    }
-}
-
-/// A submit button
-/// @param {string} $size [large] - The size of the button. Can be large, medium, or small
-@mixin Submit($size: "large", $outline: false) {
-    $type-checked: Check-Types(($size, $outline), (("string", "number"), "bool"));
-
-    @if nth($type-checked, 2) == "number" {
-        width: $size;
-    } @else {
-        @if $size == "large" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
-        } @else if $size == "medium" {
-            width: map-get($_size-medium, $width);
-            height: map-get($_size-medium, $height);
-        } @else if $size == "small" {
-            width: map-get($_size-large, $width);
-            height: map-get($_size-large, $height);
-        }
-    }
-
-    background-color: Theme("success");
-    color: Theme("text-light");
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    border-radius: $bradius;
-    transition: background-color .25s;
-
-    &:hover {
-        background-color: Theme("success-light");
+        color: Theme("text-light");
     }
 }
 

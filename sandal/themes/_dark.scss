@@ -12,11 +12,11 @@
 // but are by no way a comprehensive list
 
 // Primary / Same as Blue in Colors
-$primary-darker : hsl(20, 70%, 20%); $pri-drkr: $primary-darker ; 
-$primary-dark   : hsl(20, 70%, 29%); $pri-drk : $primary-dark   ; 
-$primary        : hsl(20, 70%, 37%); $pri     : $primary        ; 
-$primary-light  : hsl(20, 70%, 43%); $pri-lgt : $primary-light  ; 
-$primary-lighter: hsl(20, 70%, 55%); $pri-lgtr: $primary-lighter; 
+$primary-darker : hsl(20, 80%, 29%); $pri-drkr: $primary-darker ; 
+$primary-dark   : hsl(20, 80%, 37%); $pri-drk : $primary-dark   ; 
+$primary        : hsl(20, 80%, 43%); $pri     : $primary        ; 
+$primary-light  : hsl(20, 80%, 55%); $pri-lgt : $primary-light  ; 
+$primary-lighter: hsl(20, 80%, 62%); $pri-lgtr: $primary-lighter; 
 
 // Primary Map
 $primary-map: (
@@ -28,11 +28,11 @@ $primary-map: (
 );
 
 // Secondary
-$secondary-darker : hsl( 5, 55%, 20%); $sec-drkr: $secondary-darker ;
-$secondary-dark   : hsl( 5, 55%, 29%); $sec-drk : $secondary-dark   ;
-$secondary        : hsl( 5, 55%, 37%); $sec     : $secondary        ;
-$secondary-light  : hsl( 5, 55%, 43%); $sec-lgt : $secondary-light  ;
-$secondary-lighter: hsl( 5, 55%, 55%); $sec-lgtr: $secondary-lighter;
+$secondary-darker : hsl( 170, 55%, 29%); $sec-drkr: $secondary-darker ;
+$secondary-dark   : hsl( 170, 55%, 37%); $sec-drk : $secondary-dark   ;
+$secondary        : hsl( 170, 55%, 43%); $sec     : $secondary        ;
+$secondary-light  : hsl( 170, 55%, 55%); $sec-lgt : $secondary-light  ;
+$secondary-lighter: hsl( 170, 55%, 62%); $sec-lgtr: $secondary-lighter;
 
 // Secondary Map
 $secondary-map: (
@@ -76,11 +76,11 @@ $text-map: (
 // like a error class or a success class, ya know?
 
 // Error / Same as Red in Colors
-$error-darker : hsl(355, 50%, 29%); $err-drkr: $error-darker ;
-$error-dark   : hsl(355, 50%, 37%); $err-drk : $error-dark   ;
-$error        : hsl(355, 50%, 43%); $err     : $error        ;
-$error-light  : hsl(355, 50%, 55%); $err-lgt : $error-light  ;
-$error-lighter: hsl(355, 50%, 60%); $err-lgtr: $error-lighter;
+$error-darker : hsl(355, 70%, 29%); $err-drkr: $error-darker ;
+$error-dark   : hsl(355, 70%, 37%); $err-drk : $error-dark   ;
+$error        : hsl(355, 70%, 43%); $err     : $error        ;
+$error-light  : hsl(355, 70%, 55%); $err-lgt : $error-light  ;
+$error-lighter: hsl(355, 70%, 60%); $err-lgtr: $error-lighter;
 
 // Error Map
 $error-map: (
@@ -92,11 +92,11 @@ $error-map: (
 );
 
 // Warning / Same as Yellow in Colors
-$warning-darker : hsl(45, 50%, 21%); $wrn-drkr: $warning-darker ;
-$warning-dark   : hsl(45, 50%, 37%); $wrn-drk : $warning-dark   ;
-$warning        : hsl(45, 50%, 52%); $wrn     : $warning        ;
-$warning-light  : hsl(45, 50%, 63%); $wrn-lgt : $warning-light  ;
-$warning-lighter: hsl(45, 50%, 74%); $wrn-lgtr: $warning-lighter;
+$warning-darker : hsl(45, 70%, 21%); $wrn-drkr: $warning-darker ;
+$warning-dark   : hsl(45, 70%, 37%); $wrn-drk : $warning-dark   ;
+$warning        : hsl(45, 70%, 52%); $wrn     : $warning        ;
+$warning-light  : hsl(45, 70%, 63%); $wrn-lgt : $warning-light  ;
+$warning-lighter: hsl(45, 70%, 74%); $wrn-lgtr: $warning-lighter;
 
 // Warning Map
 $warning-map: (
@@ -108,11 +108,11 @@ $warning-map: (
 );
 
 // Sucess / Same as Green in Colors
-$success-darker : hsl(155, 50%, 20%); $scs-drkr: $success-darker ;
-$success-dark   : hsl(155, 50%, 29%); $scs-drk : $success-dark   ;
-$success        : hsl(155, 50%, 37%); $scs     : $success        ;
-$success-light  : hsl(155, 50%, 43%); $scs-lgt : $success-light  ;
-$success-lighter: hsl(155, 50%, 55%); $scs-lgtr: $success-lighter;
+$success-darker : hsl(155, 70%, 20%); $scs-drkr: $success-darker ;
+$success-dark   : hsl(155, 70%, 29%); $scs-drk : $success-dark   ;
+$success        : hsl(155, 70%, 37%); $scs     : $success        ;
+$success-light  : hsl(155, 70%, 43%); $scs-lgt : $success-light  ;
+$success-lighter: hsl(155, 70%, 55%); $scs-lgtr: $success-lighter;
 
 // Sucess Map
 $success-map: (
@@ -124,11 +124,11 @@ $success-map: (
 );
 
 // Info
-$info-darker : hsl(190, 50%, 20%); $inf-drkr: $info-darker ;
-$info-dark   : hsl(190, 50%, 29%); $inf-drk : $info-dark   ;
-$info        : hsl(190, 50%, 37%); $inf     : $info        ;
-$info-light  : hsl(190, 50%, 43%); $inf-lgt : $info-light  ;
-$info-lighter: hsl(190, 50%, 55%); $inf-lgtr: $info-lighter;
+$info-darker : hsl(190, 70%, 20%); $inf-drkr: $info-darker ;
+$info-dark   : hsl(190, 70%, 29%); $inf-drk : $info-dark   ;
+$info        : hsl(190, 70%, 37%); $inf     : $info        ;
+$info-light  : hsl(190, 70%, 43%); $inf-lgt : $info-light  ;
+$info-lighter: hsl(190, 70%, 55%); $inf-lgtr: $info-lighter;
 
 // Info Map
 $info-map: (

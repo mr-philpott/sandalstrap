@@ -1,108 +1,218 @@
 // --- Type Checking For Sass?? --- //
+@use "sass:meta";
 
-/// Checks the type of a value which is used in everything
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
-/// @param {string} $type - The type to be check, if the val is the same type as this then it returns true
-/// @return {bool} - A boolean which tells if the type-of the val matches the provided type 
-@function Is-Type($val, $type) {
-    @if type-of($val) == $type {
-        @return true;
-    } @else {
-        @return false;
-    }
-}
+// --- Basic Types --- //
+// This is the basic types built into sass
 
 /// Checks if the provided value is of type number
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a number
 @function Is-Number($val) {
     @return Is-Type($val, "number")
 };
 
 /// Checks if the provided value is of type color
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a color
 @function Is-Color($val) {
     @return Is-Type($val, "color")
 };
 
 /// Checks if the provided value is of type list
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a list
 @function Is-List($val) {
     @return Is-Type($val, "list")
 };
 
 /// Checks if the provided value is of type map
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a map
 @function Is-Map($val) {
     @return Is-Type($val, "map")
 };
 
 /// Checks if the provided value is of type bool
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a bool
 @function Is-Bool($val) {
     @return Is-Type($val, "bool")
 };
 
 /// Checks if the provided value is of type Null
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a Null
 @function Is-Null($val) {
     @return Is-Type($val, "null")
 };
 
 /// Checks if the provided value is of type function
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a function
 @function Is-Function($val) {
     @return Is-Type($val, "fucntion")
 };
 
 /// Checks if the provided value is of type arglist
-/// @param {string | number | color | list | map | bool | null | function | arglist} $val - The value to be type checked
+/// @see {function} Is-Type
+/// @param {any} $val - The value to be type checked
 /// @return {bool} - A boolean which tells if the type-of the val is a arglist
 @function Is-Arglist($val) {
     @return Is-Type($val, "argList")
 };
 
-/// Checks the type of multiple values
-/// @param {list | arglist} $val - The value to be type checked
-/// @param {list | arglist} $type - The types to be check, if the vals is the same type as this then it returns true
-/// @return {bool} - A boolean which tells if the type-of the vals matches the provided types 
-@function Check-Types($vals, $types) {
-    $all-correct: true;
-    $found: ();
-    
-    // Checks if vals and types are the same length
-    @if length($vals) != length($types) {@return false; }
+// --- Custom Types --- //
+// These are custom types that I took from:
+// https://css-tricks.com/snippets/sass/advanced-type-checking/
 
-    // Compares the types
-    @each $val in $vals {
-        $curr-type: nth($types, index($vals, $val));
-        @if Is-List($curr-type) {
-            $some-correct: false;
-            @each $type in $curr-type {
-                @if type-of($val) == $type {
-                    $some-correct: true;
-                    $found: append($found, $type);
-                }
-            }
-            $all-correct: $some-correct;
-        } @else {
-            @if type-of($val) != $curr-type {
-                $all-correct: false;
-            } @else {
-                $found: append($found, $curr-type);
+$_all-custom-types: (
+    time, 
+    duration,
+    angle,
+    frequency,
+    integer,
+    relative-Length,
+    absolute-Length,
+    percent,
+    length,
+    resolution
+);
+
+/// Checks if the provided value is of type Time
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a Time
+@function Is-Time($val) {
+    @return Is-Number($val) and index('ms' 's', unit($val)) != null;
+}
+
+/// Checks if the provided value is of type arglist
+/// @alias Is-Time
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Duration($val) {
+    @return Is-Time($val);
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Angle($val) {
+    @return Is-Number($val) and index('deg' 'rad' 'grad' 'turn', unit($val)) != null;
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Frequency($val) {
+    @return Is-Number($val) and index('Hz' 'kHz', unit($val)) != null;
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Integer($val) {
+    @return Is-Number($val) and round($value) == $val;
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Relative-Length($val) {
+    @return is-number($val) and index('em' 'ex' 'ch' 'rem' 'vw' 'vh' 'vmin' 'vmax', unit($val)) != null;
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Absolute-Length($val) {
+    @return Is-Number($val) and index('cm' 'mm' 'in' 'px' 'pt' 'pc', unit($val)) != null;
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Percentage($val) {
+    @return Is-Number($val) and unit($val) == '%';
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Relative-Length
+/// @see {function} Is-Absolute-Length
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Length($val) {
+    @return Is-Relative-Length($val) or Is-Absolute-Length($val);
+}
+
+/// Checks if the provided value is of type arglist
+/// @see {function} Is-Number
+/// @param {any} $val - The value to be type checked
+/// @return {bool} - A boolean which tells if the type-of the val is a arglist
+@function Is-Resolution($val) {
+    @return Is-Number($val) and index('dpi' 'dpcm' 'dppx', unit($val)) != null;
+}
+
+// --- Generic Type Check --- //
+
+/// Checks the type of a value which is used in everything
+/// @param {any} $val - The value to be type checked
+/// @param {string} $type - The type to be check, if the val is the same type as this then it returns true
+/// @return {bool} - A boolean which tells if the type-of the val matches the provided type 
+@function Is-Type($val, $type) {
+    @if type-of($val) == $type {
+        @return true;
+    } @else {
+        @each $func in $_all-custom-types {
+            @if $func == $type {
+                $func-name: "Is-" + to-upper-case(slice($func, 1, 1)) + slice($func, 2, length($func));
+                @return call($func-name, $val);
             }
         }
     }
+    @return false;
+}
 
-    @if not $all-correct {
-        @error "The types do not match the values, this is required for proper type checking";
-    } @else {
-        @return $found;
+// --- Checking --- //
+// This function does the type checking using the above functions
+
+/// Checks the type of multiple values
+/// @see {function} Is-List
+/// @see {function} Is-Type
+/// @param {map} $compare - The values you want to compare. Found like (val, type(s)), ...
+/// @return {list} - A list containing all of the found types, sometimes used in mixins
+@function Check-Types($compare...) {
+    $found: ();
+    @each $comp in $compare {
+        $value: nth($comp, 1);
+        $type: nth($comp, 2);
+        @if Is-List($type) {
+            $len: length($found);
+            @each $t in $type {
+                @if Is-Type($value, $t) {
+                    $found: append($found, $t);
+                }
+            }
+        } @else if Is-Type($value, $type) {
+            $found: append($found, $type);
+        } @else {
+            @error "Type Error: Expected type #{$type} but found #{type-of($value)} from argument #{$value}";
+        }
     }
+
+    @return $found;
 }

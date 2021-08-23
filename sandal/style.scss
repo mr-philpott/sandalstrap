@@ -10,27 +10,60 @@
 
 div {
     @include Flex-Center;
-    button {
-        &:nth-of-type(1) {
-            @include Button;
+    &:nth-of-type(1) {
+        button {
+            &:nth-of-type(1) {
+                @include Button($size: 20%);
+            }
+            &:nth-of-type(2) {
+                @include Button($size: "medium");
+            }
+            &:nth-of-type(3) {
+                @include Button($size: "small");
+            }
+            &:nth-of-type(4) {
+                @include Button($size: 20%);
+            }
         }
-        &:nth-of-type(2) {
-            @include Button("primary");
+    }
+
+    &:nth-of-type(2) {
+        button {
+            &:nth-of-type(1) {
+                @include Button("primary");
+            }
+            &:nth-of-type(2) {
+                @include Button("error");
+            }
+            &:nth-of-type(3) {
+                @include Button("warning");
+            }
+            &:nth-of-type(4) {
+                @include Button("info");
+            }
+            &:nth-of-type(5) {
+                @include Button("success");
+            }
         }
-        &:nth-of-type(3) {
-            @include Button("error");
-        }
-        &:nth-of-type(4) {
-            @include Button("warning");
-        }
-        &:nth-of-type(5) {
-            @include Button("info");
-        }
-        &:nth-of-type(6) {
-            @include Button("success");
-        }
-        &:nth-of-type(7) {
-            @include Submit;
+    }
+
+    &:nth-of-type(3) {
+        button {
+            &:nth-of-type(1) {
+                @include Button("primary", $outline: true);
+            }
+            &:nth-of-type(2) {
+                @include Button("error", $outline: true);
+            }
+            &:nth-of-type(3) {
+                @include Button("warning", $outline: true);
+            }
+            &:nth-of-type(4) {
+                @include Button("info", $outline: true);
+            }
+            &:nth-of-type(5) {
+                @include Button("success", $outline: true);
+            }
         }
     }
 }
