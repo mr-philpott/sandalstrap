@@ -1,0 +1,36 @@
+// This is the correct order of imports
+// Mixing up these imports may cause intended consquences
+
+@use "./utils" as *;
+@use "./base/reset";
+@use "./components" as *;
+
+// Your code goes after this so that if you need to overrite any styles
+// you can do so.
+
+div {
+    @include Flex-Center;
+    button {
+        &:nth-of-type(1) {
+            @include Button;
+        }
+        &:nth-of-type(2) {
+            @include Button("primary");
+        }
+        &:nth-of-type(3) {
+            @include Button("error");
+        }
+        &:nth-of-type(4) {
+            @include Button("warning");
+        }
+        &:nth-of-type(5) {
+            @include Button("info");
+        }
+        &:nth-of-type(6) {
+            @include Button("success");
+        }
+        &:nth-of-type(7) {
+            @include Submit;
+        }
+    }
+}

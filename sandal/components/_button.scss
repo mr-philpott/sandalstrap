@@ -1,0 +1,67 @@
+@use "../utils" as *;
+
+/// A button for all your button needs
+/// @param {string} $type [secondary] - The type of button as per the theme sheet
+/// @param {string} $size [large] - The size of the button. Can be large, medium, or small
+@mixin Button($type: "secondary", $size: "large", $outline: false) {
+    $type-checked: Check-Types(($type, $size, $outline), ("string", ("string", "number"), "bool"));
+
+    @if nth($type-checked, 2) == "number" {
+        width: $size;
+    } @else {
+        @if $size == "large" {
+            width: 10rem;
+            height: 4rem;
+        } @else if $size == "medium" {
+            width: 7rem;
+            height: 3rem;
+        } @else if $size == "small" {
+            width: 5rem;
+            height: 3rem;
+        }
+    }
+
+    background-color: Theme($type);
+    color: Theme("text-light");
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    border-radius: $bradius;
+    transition: background-color .25s;
+
+    &:hover {
+        background-color: Theme("#{$type}-light");
+    }
+}
+
+/// A submit button
+/// @param {string} $size [large] - The size of the button. Can be large, medium, or small
+@mixin Submit($size: "large", $outline: false) {
+    $type-checked: Check-Types(($size, $outline), (("string", "number"), "bool"));
+
+    @if nth($type-checked, 2) == "number" {
+        width: $size;
+    } @else {
+        @if $size == "large" {
+            width: 10rem;
+            height: 4rem;
+        } @else if $size == "medium" {
+            width: 7rem;
+            height: 3rem;
+        } @else if $size == "small" {
+            width: 5rem;
+            height: 3rem;
+        }
+    }
+
+    background-color: Theme("success");
+    color: Theme("text-light");
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+    border-radius: $bradius;
+    transition: background-color .25s;
+
+    &:hover {
+        background-color: Theme("success-light");
+    }
+}
+

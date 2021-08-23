@@ -1,0 +1,212 @@
+// --- Colors --- //
+// All of the colors of the rainbow and more!
+// But is not a comphesive list of all colors possible
+// Feel free to make your own and add or replace them here
+// !!! More colors to be added later !!!
+
+// Rainbow
+
+// Red
+$red-darker : hsl(355, 70%, 11%); $red-drkr: $red-darker ;
+$red-dark   : hsl(355, 70%, 21%); $red-drk : $red-dark   ;
+$red        : hsl(355, 70%, 37%); $red     : $red        ;
+$red-light  : hsl(355, 70%, 52%); $red-lgt : $red-light  ;
+$red-lighter: hsl(355, 70%, 63%); $red-lgtr: $red-lighter;
+
+// Red Map
+$red-map: (
+    red-darker : $red-drkr,
+    red-dark   : $red-drk ,
+    red        : $red     ,
+    red-light  : $red-lgt ,
+    red-lighter: $red-lgtr,
+);
+
+// Orange
+$orange-darker : hsl(20, 70%, 11%); $orn-drkr: $orange-darker ;
+$orange-dark   : hsl(20, 70%, 21%); $orn-drk : $orange-dark   ;
+$orange        : hsl(20, 70%, 37%); $orn     : $orange        ;
+$orange-light  : hsl(20, 70%, 52%); $orn-lgt : $orange-light  ;
+$orange-lighter: hsl(20, 70%, 63%); $orn-lgtr: $orange-lighter;
+
+// Orange Map
+$orange-map: (
+    orange-darker : $orn-drkr,
+    orange-dark   : $orn-drk ,
+    orange        : $orn     ,
+    orange-light  : $orn-lgt ,
+    orange-lighter: $orn-lgtr,
+);
+
+// Yellow
+$yellow-darker : hsl(45, 70%, 11%); $yel-drkr: $yellow-darker ;
+$yellow-dark   : hsl(45, 70%, 21%); $yel-drk : $yellow-dark   ;
+$yellow        : hsl(45, 70%, 37%); $yel     : $yellow        ;
+$yellow-light  : hsl(45, 70%, 52%); $yel-lgt : $yellow-light  ;
+$yellow-lighter: hsl(45, 70%, 63%); $yel-lgtr: $yellow-lighter;
+
+// Yellow Map
+$yellow-map: (
+    yellow-darker : $yel-drkr,
+    yellow-dark   : $yel-drk ,
+    yellow        : $yel     ,
+    yellow-light  : $yel-lgt ,
+    yellow-lighter: $yel-lgtr,
+);
+
+// Green
+$green-darker : hsl(155, 70%, 11%); $grn-drkr: $green-darker ;
+$green-dark   : hsl(155, 70%, 21%); $grn-drk : $green-dark   ;
+$green        : hsl(155, 70%, 37%); $grn     : $green        ;
+$green-light  : hsl(155, 70%, 52%); $grn-lgt : $green-light  ;
+$green-lighter: hsl(155, 70%, 63%); $grn-lgtr: $green-lighter;
+
+// Green Map
+$green-map: (
+    green-darker : $grn-drkr,
+    green-dark   : $grn-drk ,
+    green        : $grn     ,
+    green-light  : $grn-lgt ,
+    green-lighter: $grn-lgtr,
+);
+
+// Blue
+$blue-darker : hsl(200, 70%, 11%); $blu-drkr: $blue-darker ;
+$blue-dark   : hsl(200, 70%, 21%); $blu-drk : $blue-dark   ;
+$blue        : hsl(200, 70%, 37%); $blu     : $blue        ;
+$blue-light  : hsl(200, 70%, 52%); $blu-lgt : $blue-light  ;
+$blue-lighter: hsl(200, 70%, 63%); $blu-lgtr: $blue-lighter;
+
+// Blue Map
+$blue-map: (
+    blue-darker : $blu-drkr,
+    blue-dark   : $blu-drk ,
+    blue        : $blu     ,
+    blue-light  : $blu-lgt ,
+    blue-lighter: $blu-lgtr,
+);
+
+// Purple
+$purple-darker : hsl(270, 70%, 11%); $pur-drkr: $purple-darker ;
+$purple-dark   : hsl(270, 70%, 21%); $pur-drk : $purple-dark   ;
+$purple        : hsl(270, 70%, 37%); $pur     : $purple        ;
+$purple-light  : hsl(270, 70%, 52%); $pur-lgt : $purple-light  ;
+$purple-lighter: hsl(270, 70%, 63%); $pur-lgtr: $purple-lighter;
+
+// Purple Map
+$purple-map: (
+    purple-darker : $pur-drkr,
+    purple-dark   : $pur-drk ,
+    purple        : $pur     ,
+    purple-light  : $pur-lgt ,
+    purple-lighter: $pur-lgtr,
+);
+
+// Violet
+$violet-darker : hsl(285, 70%, 11%); $vio-drkr: $violet-darker ;
+$violet-dark   : hsl(285, 70%, 21%); $vio-drk : $violet-dark   ;
+$violet        : hsl(285, 70%, 37%); $vio     : $violet        ;
+$violet-light  : hsl(285, 70%, 52%); $vio-lgt : $violet-light  ;
+$violet-lighter: hsl(285, 70%, 63%); $vio-lgtr: $violet-lighter;
+
+// Violet Map
+$violet-map: (
+    violet-darker : $vio-drkr,
+    violet-dark   : $vio-drk ,
+    violet        : $vio     ,
+    violet-light  : $vio-lgt ,
+    violet-lighter: $vio-lgtr,
+);
+
+// Others
+
+// Cyan
+$cyan-darker : hsl(180, 70%, 11%); $cyn-drkr: $cyan-darker ;
+$cyan-dark   : hsl(180, 70%, 21%); $cyn-drk : $cyan-dark   ;
+$cyan        : hsl(180, 70%, 37%); $cyn     : $cyan        ;
+$cyan-light  : hsl(180, 70%, 52%); $cyn-lgt : $cyan-light  ;
+$cyan-lighter: hsl(180, 70%, 63%); $cyn-lgtr: $cyan-lighter;
+
+// Cyan Map
+$cyan-map: (
+    cyan-darker : $cyn-drkr,
+    cyan-dark   : $cyn-drk ,
+    cyan        : $cyn     ,
+    cyan-light  : $cyn-lgt ,
+    cyan-lighter: $cyn-lgtr,
+);
+
+// Mint
+$mint-darker : hsl(160, 70%, 11%); $mnt-drkr: $mint-darker ;
+$mint-dark   : hsl(160, 70%, 21%); $mnt-drk : $mint-dark   ;
+$mint        : hsl(160, 70%, 37%); $mnt     : $mint        ;
+$mint-light  : hsl(160, 70%, 52%); $mnt-lgt : $mint-light  ;
+$mint-lighter: hsl(160, 70%, 63%); $mnt-lgtr: $mint-lighter;
+
+// Mint Map
+$mint-map: (
+    mint-darker : $mnt-drkr,
+    mint-dark   : $mnt-drk ,
+    mint        : $mnt     ,
+    mint-light  : $mnt-lgt ,
+    mint-lighter: $mnt-lgtr,
+);
+
+// Pink
+$pink-darker : hsl(335, 70%, 11%); $pnk-drkr: $pink-darker ;
+$pink-dark   : hsl(335, 70%, 21%); $pnk-drk : $pink-dark   ;
+$pink        : hsl(335, 70%, 37%); $pnk     : $pink        ;
+$pink-light  : hsl(335, 70%, 52%); $pnk-lgt : $pink-light  ;
+$pink-lighter: hsl(335, 70%, 63%); $pnk-lgtr: $pink-lighter;
+
+// Pink Map
+$pink-map: (
+    pink-darker : $pnk-drkr,
+    pink-dark   : $pnk-drk ,
+    pink        : $pnk     ,
+    pink-light  : $pnk-lgt ,
+    pink-lighter: $pnk-lgtr,
+);
+
+// --- Monotone --- //
+// Useful for planning a page without color to see what pops and what doesnt
+
+$black  : hsl(0, 0%,   0%);
+$gray-0 : hsl(0, 0%,   5%);
+$gray-1 : hsl(0, 0%,  13%);
+$gray-2 : hsl(0, 0%,  21%);
+$gray-3 : hsl(0, 0%,  29%);
+$gray-4 : hsl(0, 0%,  37%);
+$gray-5 : hsl(0, 0%,  45%);
+$gray-6 : hsl(0, 0%,  52%);
+$gray-7 : hsl(0, 0%,  60%);
+$gray-8 : hsl(0, 0%,  67%);
+$gray-9 : hsl(0, 0%,  74%);
+$gray-10: hsl(0, 0%,  81%);
+$gray-11: hsl(0, 0%,  88%);
+$gray-12: hsl(0, 0%,  95%);
+$white  : hsl(0, 0%, 100%);
+
+$monotone-map: (
+    black  : $black  ,
+    gray-0 : $gray-0 ,
+    gray-1 : $gray-1 ,
+    gray-2 : $gray-2 ,
+    gray-3 : $gray-3 ,
+    gray-4 : $gray-4 ,
+    gray-5 : $gray-5 ,
+    gray-6 : $gray-6 ,
+    gray-7 : $gray-7 ,
+    gray-8 : $gray-8 ,
+    gray-9 : $gray-9 ,
+    gray-10: $gray-10,
+    gray-11: $gray-11,
+    gray-12: $gray-12,
+    white  : $white  ,
+);
+
+// --- Misc --- //
+// Some of the colors I could find a spot for
+
+$off-white: hsl(0, 0%, 95%);
+$off-black: hsl(0, 0%, 10%);
