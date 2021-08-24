@@ -13,7 +13,7 @@ div {
     &:nth-of-type(1) {
         button {
             &:nth-of-type(1) {
-                @include Button($size: 20%);
+                @include Button($size: 100%);
             }
             &:nth-of-type(2) {
                 @include Button($size: "medium");
@@ -30,19 +30,19 @@ div {
     &:nth-of-type(2) {
         button {
             &:nth-of-type(1) {
-                @include Button("primary");
+                @include Button("primary", 20%);
             }
             &:nth-of-type(2) {
-                @include Button("error");
+                @include Button("error", 40%);
             }
             &:nth-of-type(3) {
-                @include Button("warning");
+                @include Button("warning", 60%);
             }
             &:nth-of-type(4) {
-                @include Button("info");
+                @include Button("info", 80%);
             }
             &:nth-of-type(5) {
-                @include Button("success");
+                @include Button("success", 100%);
             }
         }
     }
@@ -50,19 +50,19 @@ div {
     &:nth-of-type(3) {
         button {
             &:nth-of-type(1) {
-                @include Button("primary", $outline: true);
+                @include Button("primary", "large", $outline: true);
             }
             &:nth-of-type(2) {
                 @include Button("error", $outline: true);
             }
             &:nth-of-type(3) {
-                @include Button("warning", $outline: true);
+                @include Button("warning", "small", $outline: true);
             }
             &:nth-of-type(4) {
                 @include Button("info", $outline: true);
             }
             &:nth-of-type(5) {
-                @include Button("success", $outline: true);
+                @include Button("success", "large", $outline: true);
             }
         }
     }

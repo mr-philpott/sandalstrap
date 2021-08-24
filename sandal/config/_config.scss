@@ -14,15 +14,15 @@ $settings: (
         border-radius: .5rem,
 
         /// @name quick-theme
-        /// @prop {color} primary - The primary color
-        /// @prop {color} secondary - The secondary color
-        /// @prop {color} background - The background color
-        /// @prop {color} text - The text color
-        /// @prop {color} error - The error color
-        /// @prop {color} warning - The warning color
-        /// @prop {color} success - The success color
-        /// @prop {color} info - The info color
-        /// @prop {color} disabled - The disabled color
+        /// @prop {color} primary - The primary color for the quick theme
+        /// @prop {color} secondary - The secondary color for the quick theme
+        /// @prop {color} background - The background color for the quick theme
+        /// @prop {color} text - The text color for the quick theme
+        /// @prop {color} error - The error color for the quick theme
+        /// @prop {color} warning - The warning color for the quick theme
+        /// @prop {color} success - The success color for the quick theme
+        /// @prop {color} info - The info color for the quick theme
+        /// @prop {color} disabled - The disabled color for the quick theme
         quick-theme: (
             primary:    hsl(200, 70%, 37%),
             secondary:  hsl(200, 15%, 37%),

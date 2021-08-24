@@ -1,7 +1,35 @@
 @use "../config" as *;
 @use "../utils" as *;
 
-$radius: Map-Deep-Search($settings, "border-radius");
+$_radius: Map-Deep-Search($settings, "border-radius");
+$_width: (
+    max: 15rem,
+    min: 3rem,
+    large: 12.5rem,
+    medium: 8rem,
+    small: 5rem,
+);
+$_height: (
+    max: 4rem,
+    min: 1rem,
+    large: 4rem,
+    medium: 3rem,
+    small: 2rem,
+);
+$_font: (
+    max: 2.5rem,
+    min: .5rem,
+    large: 2rem,
+    medium: 1rem,
+    small: .75rem,
+);
+$_padding: (
+    max: 1.25rem,
+    min: .5rem,
+    large: 1.5rem,
+    medium: 1rem,
+    small: .5rem,
+);
 
 /// A button for all your button needs
 /// @param {string} $type [secondary] - The type of button as per the theme sheet
@@ -14,17 +42,26 @@ $radius: Map-Deep-Search($settings, "border-radius");
 ) {
     $type-checked: Check-Types(($type, "string"), ($size, ("string", "percent")), ($outline, "bool"));
 
-    width: $size;
+    @if nth($type-checked, 2) == "percent" {
+        min-width: Lerp(map-get($_width, "min"), map-get($_width, "max"), $size / 100%);
+        min-height: Lerp(map-get($_height, "min"), map-get($_height, "max"), $size / 100%);
+        font-size: Lerp(map-get($_font, "min"), map-get($_font, "max"), $size / 100%);
+        padding: Lerp(map-get($_padding, "min"), map-get($_padding, "max"), $size / 100%);
+    } @else {
+        min-width: map-get($_width, $size);
+        min-height: map-get($_height, $size);
+        font-size: map-get($_font, $size);
+        padding: map-get($_padding, $size);
+    }
 
-    font-size: 1.25rem;
-    padding: .75rem 1.5rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
     transition: background-color .25s, color .25s;
-    border-radius: $radius;
+    border-radius: $_radius;
 
     @if $outline {
-        border: .19rem Theme("#{$type}-light") solid;
+        background-color: transparent;
+        border: Theme($type) solid .19rem;
         color: Theme($type);
     } @else {
         color: Theme("text-light");

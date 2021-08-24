@@ -39,3 +39,9 @@ $layers: (
     @return false
 };
 
+// Lerp
+@function Lerp($min, $max, $amt) {
+    $type-checked: Check-Types(($min, "length"), ($max, "length"), ($amt, "number"));
+
+    @return $min + (($max - $min) * $amt);
+}

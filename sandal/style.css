@@ -289,9 +289,10 @@ div {
   align-items: center;
 }
 div:nth-of-type(1) button:nth-of-type(1) {
-  width: 20%;
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 15rem;
+  min-height: 4rem;
+  font-size: 2.5rem;
+  padding: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -304,9 +305,10 @@ div:nth-of-type(1) button:nth-of-type(1):hover {
   color: #191b1f;
 }
 div:nth-of-type(1) button:nth-of-type(2) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  padding: 1rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -319,9 +321,10 @@ div:nth-of-type(1) button:nth-of-type(2):hover {
   color: #191b1f;
 }
 div:nth-of-type(1) button:nth-of-type(3) {
-  width: "small";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 5rem;
+  min-height: 2rem;
+  font-size: 0.75rem;
+  padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -334,9 +337,10 @@ div:nth-of-type(1) button:nth-of-type(3):hover {
   color: #191b1f;
 }
 div:nth-of-type(1) button:nth-of-type(4) {
-  width: 20%;
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 5.4rem;
+  min-height: 1.6rem;
+  font-size: 0.9rem;
+  padding: 0.65rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -349,9 +353,10 @@ div:nth-of-type(1) button:nth-of-type(4):hover {
   color: #191b1f;
 }
 div:nth-of-type(2) button:nth-of-type(1) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 5.4rem;
+  min-height: 1.6rem;
+  font-size: 0.9rem;
+  padding: 0.65rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -364,9 +369,10 @@ div:nth-of-type(2) button:nth-of-type(1):hover {
   color: #191b1f;
 }
 div:nth-of-type(2) button:nth-of-type(2) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 7.8rem;
+  min-height: 2.2rem;
+  font-size: 1.3rem;
+  padding: 0.8rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -379,9 +385,10 @@ div:nth-of-type(2) button:nth-of-type(2):hover {
   color: #191b1f;
 }
 div:nth-of-type(2) button:nth-of-type(3) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 10.2rem;
+  min-height: 2.8rem;
+  font-size: 1.7rem;
+  padding: 0.95rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -394,9 +401,10 @@ div:nth-of-type(2) button:nth-of-type(3):hover {
   color: #191b1f;
 }
 div:nth-of-type(2) button:nth-of-type(4) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 12.6rem;
+  min-height: 3.4rem;
+  font-size: 2.1rem;
+  padding: 1.1rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -409,9 +417,10 @@ div:nth-of-type(2) button:nth-of-type(4):hover {
   color: #191b1f;
 }
 div:nth-of-type(2) button:nth-of-type(5) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 15rem;
+  min-height: 4rem;
+  font-size: 2.5rem;
+  padding: 1.25rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
@@ -424,14 +433,16 @@ div:nth-of-type(2) button:nth-of-type(5):hover {
   color: #191b1f;
 }
 div:nth-of-type(3) button:nth-of-type(1) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 12.5rem;
+  min-height: 4rem;
+  font-size: 2rem;
+  padding: 1.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  border: 0.19rem #2187ba solid;
+  background-color: transparent;
+  border: #1c74a0 solid 0.19rem;
   color: #1c74a0;
 }
 div:nth-of-type(3) button:nth-of-type(1):hover {
@@ -439,14 +450,16 @@ div:nth-of-type(3) button:nth-of-type(1):hover {
   color: #191b1f;
 }
 div:nth-of-type(3) button:nth-of-type(2) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  padding: 1rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  border: 0.19rem #d42534 solid;
+  background-color: transparent;
+  border: #ba212e solid 0.19rem;
   color: #ba212e;
 }
 div:nth-of-type(3) button:nth-of-type(2):hover {
@@ -454,14 +467,16 @@ div:nth-of-type(3) button:nth-of-type(2):hover {
   color: #191b1f;
 }
 div:nth-of-type(3) button:nth-of-type(3) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 5rem;
+  min-height: 2rem;
+  font-size: 0.75rem;
+  padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  border: 0.19rem #dfb949 solid;
+  background-color: transparent;
+  border: #daaf2f solid 0.19rem;
   color: #daaf2f;
 }
 div:nth-of-type(3) button:nth-of-type(3):hover {
@@ -469,14 +484,16 @@ div:nth-of-type(3) button:nth-of-type(3):hover {
   color: #191b1f;
 }
 div:nth-of-type(3) button:nth-of-type(4) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  padding: 1rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  border: 0.19rem #21a1ba solid;
+  background-color: transparent;
+  border: #1c8aa0 solid 0.19rem;
   color: #1c8aa0;
 }
 div:nth-of-type(3) button:nth-of-type(4):hover {
@@ -484,14 +501,16 @@ div:nth-of-type(3) button:nth-of-type(4):hover {
   color: #191b1f;
 }
 div:nth-of-type(3) button:nth-of-type(5) {
-  width: "medium";
-  font-size: 1.25rem;
-  padding: 0.75rem 1.5rem;
+  min-width: 12.5rem;
+  min-height: 4rem;
+  font-size: 2rem;
+  padding: 1.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  border: 0.19rem #21ba7a solid;
+  background-color: transparent;
+  border: #1ca069 solid 0.19rem;
   color: #1ca069;
 }
 div:nth-of-type(3) button:nth-of-type(5):hover {
