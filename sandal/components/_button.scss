@@ -2,6 +2,7 @@
 @use "../utils" as *;
 
 $_radius: Map-Deep-Search($settings, "border-radius");
+$_border-thickness: .19rem;
 $_width: (
     max: 15rem,
     min: 3rem,
@@ -61,7 +62,7 @@ $_padding: (
 
     @if $outline {
         background-color: transparent;
-        border: Theme($type) solid .19rem;
+        border: Theme($type) solid $_border-thickness;
         color: Theme($type);
     } @else {
         color: Theme("text-light");
@@ -71,6 +72,47 @@ $_padding: (
     &:hover {
         background-color: Theme("#{$type}-light");
         color: Theme("text-light");
+    }
+}
+
+/// A button for all your button needs
+/// @param {string} $direction [row] - The direction of the buttons, row or column
+/// @param {string} $size [large] - The size of the button. Can be large, medium, or small
+/// @param {bool} $outline [false] - Determines if the button styles are that of an outline
+@mixin Button-Toolbar($direction: row, $button-styles: ()) {
+    @include Flex-Center($direction);
+
+    & > * {
+        @include Button($button-styles...);
+        border-radius: 0;
+
+        @if $direction == row {
+            border-width: $_border-thickness $_border-thickness / 2;
+        } @else {
+            border-width: $_border-thickness / 2 $_border-thickness;
+        }
+        
+        &:nth-of-type(1) {
+            border-top-left-radius: $_radius;
+            @if $direction == row {
+                border-left-width: $_border-thickness;
+                border-bottom-left-radius: $_radius;
+            } @else if $direction == column {
+                border-top-width: $_border-thickness;
+                border-top-right-radius: $_radius;
+            }
+        }
+
+        &:nth-last-of-type(1) {
+            border-bottom-right-radius: $_radius;
+            @if $direction == row {
+                border-right-width: $_border-thickness;
+                border-top-right-radius: $_radius;
+            } @else if $direction == column {
+                border-bottom-width: $_border-thickness;
+                border-bottom-left-radius: $_radius;
+            }
+        }
     }
 }
 

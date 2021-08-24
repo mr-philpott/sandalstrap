@@ -8,62 +8,75 @@
 // Your code goes after this so that if you need to overrite any styles
 // you can do so.
 
-div {
-    @include Flex-Center;
-    &:nth-of-type(1) {
-        button {
-            &:nth-of-type(1) {
-                @include Button($size: 100%);
-            }
-            &:nth-of-type(2) {
-                @include Button($size: "medium");
-            }
-            &:nth-of-type(3) {
-                @include Button($size: "small");
-            }
-            &:nth-of-type(4) {
-                @include Button($size: 20%);
+body {
+    > div {
+        @include Flex-Center;
+        &:nth-of-type(1) {
+            button {
+                &:nth-of-type(1) {
+                    @include Button($size: 100%);
+                }
+                &:nth-of-type(2) {
+                    @include Button($size: "medium");
+                }
+                &:nth-of-type(3) {
+                    @include Button($size: "small");
+                }
+                &:nth-of-type(4) {
+                    @include Button($size: -20%);
+                }
             }
         }
-    }
+    
+        &:nth-of-type(2) {
+            button {
+                &:nth-of-type(1) {
+                    @include Button("primary", 20%);
+                }
+                &:nth-of-type(2) {
+                    @include Button("error", 40%);
+                }
+                &:nth-of-type(3) {
+                    @include Button("warning", 60%);
+                }
+                &:nth-of-type(4) {
+                    @include Button("info", 80%);
+                }
+                &:nth-of-type(5) {
+                    @include Button("success", 100%);
+                }
+            }
+        }
+    
+        &:nth-of-type(3) {
+            button {
+                &:nth-of-type(1) {
+                    @include Button("primary", "large", $outline: true);
+                }
+                &:nth-of-type(2) {
+                    @include Button("error", $outline: true);
+                }
+                &:nth-of-type(3) {
+                    @include Button("warning", "small", $outline: true);
+                }
+                &:nth-of-type(4) {
+                    @include Button("info", $outline: true);
+                }
+                &:nth-of-type(5) {
+                    @include Button("success", "large", $outline: true);
+                }
+            }
+        }
+    
+        &:nth-of-type(4) {
+            div:nth-of-type(1) {
+                @include Button-Toolbar(column, ("primary", 15%, true));
+            }
 
-    &:nth-of-type(2) {
-        button {
-            &:nth-of-type(1) {
-                @include Button("primary", 20%);
-            }
-            &:nth-of-type(2) {
-                @include Button("error", 40%);
-            }
-            &:nth-of-type(3) {
-                @include Button("warning", 60%);
-            }
-            &:nth-of-type(4) {
-                @include Button("info", 80%);
-            }
-            &:nth-of-type(5) {
-                @include Button("success", 100%);
+            div:nth-of-type(2) {
+                @include Button-Toolbar(row, ("error", 50%));
             }
         }
-    }
-
-    &:nth-of-type(3) {
-        button {
-            &:nth-of-type(1) {
-                @include Button("primary", "large", $outline: true);
-            }
-            &:nth-of-type(2) {
-                @include Button("error", $outline: true);
-            }
-            &:nth-of-type(3) {
-                @include Button("warning", "small", $outline: true);
-            }
-            &:nth-of-type(4) {
-                @include Button("info", $outline: true);
-            }
-            &:nth-of-type(5) {
-                @include Button("success", "large", $outline: true);
-            }
-        }
+    
     }
 }
