@@ -24,13 +24,6 @@ $_font: (
     medium: 1rem,
     small: .75rem,
 );
-$_padding: (
-    max: 1.25rem,
-    min: .5rem,
-    large: 1.5rem,
-    medium: 1rem,
-    small: .5rem,
-);
 
 /// A button for all your button needs
 /// @param {string} $type [secondary] - The type of button as per the theme sheet
@@ -47,14 +40,13 @@ $_padding: (
         min-width: Lerp(map-get($_width, "min"), map-get($_width, "max"), $size / 100%);
         min-height: Lerp(map-get($_height, "min"), map-get($_height, "max"), $size / 100%);
         font-size: Lerp(map-get($_font, "min"), map-get($_font, "max"), $size / 100%);
-        padding: Lerp(map-get($_padding, "min"), map-get($_padding, "max"), $size / 100%);
     } @else {
         min-width: map-get($_width, $size);
         min-height: map-get($_height, $size);
         font-size: map-get($_font, $size);
-        padding: map-get($_padding, $size);
     }
 
+    padding: .5rem;
     font-weight: bold;
     letter-spacing: 0.05rem;
     transition: background-color .25s, color .25s;
@@ -62,11 +54,13 @@ $_padding: (
 
     @if $outline {
         background-color: transparent;
+        box-sizing: border-box;
         border: Theme($type) solid $_border-thickness;
         color: Theme($type);
     } @else {
         color: Theme("text-light");
         background-color: Theme($type);
+        border: transparent solid $_border-thickness;
     }
 
     &:hover {
@@ -77,8 +71,7 @@ $_padding: (
 
 /// A button for all your button needs
 /// @param {string} $direction [row] - The direction of the buttons, row or column
-/// @param {string} $size [large] - The size of the button. Can be large, medium, or small
-/// @param {bool} $outline [false] - Determines if the button styles are that of an outline
+/// @param {list} $button-styles [()] - The button styles @see {mixin} Button
 @mixin Button-Toolbar($direction: row, $button-styles: ()) {
     @include Flex-Center($direction);
 
