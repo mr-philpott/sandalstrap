@@ -1,9 +1,25 @@
+/// The settings for the project. Everything you could want to control is here.
+///@include
+
 $settings: (
     strict: true,
     utils: true,
     
     styles: (
-        base-theme: "dark",
+        base-theme: "quick",
         border-radius: .5rem,
+
+        quick-theme: (
+            primary:    hsl(200, 70%, 37%),
+            secondary:  hsl(200, 15%, 37%),
+            background: hsl( 50, 40%, 95%),
+            text:       hsl(225, 10%,  6%),
+            error:      hsl(355, 70%, 43%),
+            warning:    hsl( 45, 70%, 52%),
+            success:    hsl(155, 70%, 37%),
+            info:       hsl(190, 70%, 37%),
+            disabled:   hsl(200, 10%, 37%),
+        )
     ),
 );
+
