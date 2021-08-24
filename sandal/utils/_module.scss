@@ -1,0 +1,13 @@
+@use "../config" as *;
+@use "../utils/map" as *;
+
+@use "../themes/light";
+@use "../themes/dark";
+@use "../themes/default";
+@use "../themes/quick";
+
+// Gets a theme
+$_theme: module-variables(Map-Deep-Search($settings, "base-theme"));
+@function Theme($key) {
+    @return map-get($_theme, $key);
+}

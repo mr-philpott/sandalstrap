@@ -1,14 +1,28 @@
 /// The settings for the project. Everything you could want to control is here.
-///@include
-
+/// @name settings
+/// @prop {bool} strict [true] - Determines if type checking is on
+/// @prop {map} styles - Sets site-wide styles
 $settings: (
     strict: true,
-    utils: true,
     
+    /// @name styles
+    /// @prop {string} base-theme - The base theme for the site. If on "quick" the following quick-theme styles are nessisary
+    /// @prop {length} border-radius - A default border radius for the site
+    /// @prop {map} quick-theme - The styles if the base theme is quick
     styles: (
         base-theme: "quick",
         border-radius: .5rem,
 
+        /// @name quick-theme
+        /// @prop {color} primary - The primary color
+        /// @prop {color} secondary - The secondary color
+        /// @prop {color} background - The background color
+        /// @prop {color} text - The text color
+        /// @prop {color} error - The error color
+        /// @prop {color} warning - The warning color
+        /// @prop {color} success - The success color
+        /// @prop {color} info - The info color
+        /// @prop {color} disabled - The disabled color
         quick-theme: (
             primary:    hsl(200, 70%, 37%),
             secondary:  hsl(200, 15%, 37%),
@@ -22,4 +36,3 @@ $settings: (
         )
     ),
 );
-

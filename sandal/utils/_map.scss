@@ -1,0 +1,32 @@
+@use "../config";
+@use "./type" as *;
+
+// Merges multiple maps
+@function Map-Merge-Multiple($maps...) {
+    $result: ();
+    @each $map in $maps {
+        $result: map-merge($result, $map);
+    };
+    @return $result;
+}
+
+// Map Deep Search
+@function Map-Deep-Search($map, $find) {
+    $nested: ();
+    @each $key, $val in $map {
+        @if $find == $key {
+            @return $val;
+        } @else if Is-Map($val) {
+            $nested: append($nested, $val);
+        }
+    }
+
+    @each $nest in $nested {
+        $found: Map-Deep-Search($nest, $find);
+        @if $found {
+            @return $found;
+        }
+    }
+
+    @return null;
+}

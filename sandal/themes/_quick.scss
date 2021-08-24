@@ -1,6 +1,6 @@
-@use "../utils" as *; 
-@use "../config" as *;
 @use "sass:color" as *;
+@use "../config" as *;
+@use "../utils/map" as *;
 
 // --- Intro --- //
 // This is the quick themes for any website made using sandal
@@ -27,12 +27,12 @@ $init-success:    Map-Deep-Search($settings, "success");
 $init-info:       Map-Deep-Search($settings, "info");
 $init-disabled:   Map-Deep-Search($settings, "disabled");
 
-// Primary / Same as Blue in Colors
-$primary-darker : darken($init-primary, 17%) ; $pri-drkr: $primary-darker ;
-$primary-dark   : darken($init-primary,  8%) ; $pri-drk : $primary-dark   ;
-$primary        : $init-primary              ; $pri     : $primary        ;
-$primary-light  : lighten($init-primary,  6%); $pri-lgt : $primary-light  ;
-$primary-lighter: lighten($init-primary, 18%); $pri-lgtr: $primary-lighter;
+// Primary
+$primary-darker : adjust($init-primary, $lightness: -17%); $pri-drkr: $primary-darker ;
+$primary-dark   : adjust($init-primary, $lightness: -8%) ; $pri-drk : $primary-dark   ;
+$primary        : $init-primary                          ; $pri     : $primary        ;
+$primary-light  : adjust($init-primary, $lightness: 6%)  ; $pri-lgt : $primary-light  ;
+$primary-lighter: adjust($init-primary, $lightness: 18%) ; $pri-lgtr: $primary-lighter;
 
 // Primary Map
 $primary-map: (
@@ -44,11 +44,11 @@ $primary-map: (
 );
 
 // Secondary
-$secondary-darker : hsl(200, 15%, 20%); $sec-drkr: $secondary-darker ;
-$secondary-dark   : hsl(200, 15%, 29%); $sec-drk : $secondary-dark   ;
-$secondary        : hsl(200, 15%, 37%); $sec     : $secondary        ;
-$secondary-light  : hsl(200, 15%, 43%); $sec-lgt : $secondary-light  ;
-$secondary-lighter: hsl(200, 15%, 55%); $sec-lgtr: $secondary-lighter;
+$secondary-darker : adjust($init-secondary, $lightness: -17%); $sec-drkr: $secondary-darker ;
+$secondary-dark   : adjust($init-secondary, $lightness: -8%) ; $sec-drk : $secondary-dark   ;
+$secondary        : $init-secondary                          ; $sec     : $secondary        ;
+$secondary-light  : adjust($init-secondary, $lightness:  6%) ; $sec-lgt : $secondary-light  ;
+$secondary-lighter: adjust($init-secondary, $lightness: 18%) ; $sec-lgtr: $secondary-lighter;
 
 // Secondary Map
 $secondary-map: (
@@ -64,9 +64,9 @@ $secondary-map: (
 // For exmaple background or text
 
 // Background
-$background-dark : hsl(50, 40%, 90%); $bg-drk: $background-dark ;
-$background      : hsl(50, 40%, 95%); $bg    : $background      ;
-$background-light: hsl(50, 40%,100%); $bg-lgt: $background-light;
+$background-dark : adjust($init-background, $lightness: -5%); $bg-drk: $background-dark ;
+$background      : $init-background                         ; $bg    : $background      ;
+$background-light: adjust($init-background, $lightness: 5%) ; $bg-lgt: $background-light;
 
 // Background Map
 $background-map: (
@@ -75,10 +75,10 @@ $background-map: (
     background-light: $bg-lgt,
 );
 
-// Text Dark
-$text-dark : hsl(225, 10%,  1%); $txt-drk: $text-dark ;
-$text      : hsl(225, 10%,  6%); $txt    : $text      ;
-$text-light: hsl( 60, 35%, 95%); $txt-lgt: $text-light;
+// Text
+$text-dark : adjust($init-text, $lightness: -5%); $txt-drk: $text-dark ;
+$text      : $init-text                         ; $txt    : $text      ;
+$text-light: adjust($init-text, $lightness: 5%) ; $txt-lgt: $text-light;
 
 // Text Map
 $text-map: (
@@ -91,12 +91,12 @@ $text-map: (
 // These are not the css classes but rather a sort of class of types
 // like a error class or a success class, ya know?
 
-// Error / Same as Red in Colors
-$error-darker : hsl(355, 70%, 29%); $err-drkr: $error-darker ;
-$error-dark   : hsl(355, 70%, 37%); $err-drk : $error-dark   ;
-$error        : hsl(355, 70%, 43%); $err     : $error        ;
-$error-light  : hsl(355, 70%, 55%); $err-lgt : $error-light  ;
-$error-lighter: hsl(355, 70%, 60%); $err-lgtr: $error-lighter;
+// Error
+$error-darker : adjust($init-error, $lightness: -17%); $err-drkr: $error-darker ;
+$error-dark   : adjust($init-error, $lightness: -8%) ; $err-drk : $error-dark   ;
+$error        : $init-error                          ; $err     : $error        ;
+$error-light  : adjust($init-error, $lightness:  6%) ; $err-lgt : $error-light  ;
+$error-lighter: adjust($init-error, $lightness: 18%) ; $err-lgtr: $error-lighter;
 
 // Error Map
 $error-map: (
@@ -107,12 +107,12 @@ $error-map: (
     error-lighter: $err-lgtr,
 );
 
-// Warning / Same as Yellow in Colors
-$warning-darker : hsl(45, 70%, 21%); $wrn-drkr: $warning-darker ;
-$warning-dark   : hsl(45, 70%, 37%); $wrn-drk : $warning-dark   ;
-$warning        : hsl(45, 70%, 52%); $wrn     : $warning        ;
-$warning-light  : hsl(45, 70%, 63%); $wrn-lgt : $warning-light  ;
-$warning-lighter: hsl(45, 70%, 74%); $wrn-lgtr: $warning-lighter;
+// Warning
+$warning-darker : adjust($init-warning, $lightness: -17%); $wrn-drkr: $warning-darker ;
+$warning-dark   : adjust($init-warning, $lightness: -8%) ; $wrn-drk : $warning-dark   ;
+$warning        : $init-warning                          ; $wrn     : $warning        ;
+$warning-light  : adjust($init-warning, $lightness:  6%) ; $wrn-lgt : $warning-light  ;
+$warning-lighter: adjust($init-warning, $lightness: 18%) ; $wrn-lgtr: $warning-lighter;
 
 // Warning Map
 $warning-map: (
@@ -123,12 +123,12 @@ $warning-map: (
     warning-lighter: $wrn-lgtr,
 );
 
-// Sucess / Same as Green in Colors
-$success-darker : hsl(155, 70%, 20%); $scs-drkr: $success-darker ;
-$success-dark   : hsl(155, 70%, 29%); $scs-drk : $success-dark   ;
-$success        : hsl(155, 70%, 37%); $scs     : $success        ;
-$success-light  : hsl(155, 70%, 43%); $scs-lgt : $success-light  ;
-$success-lighter: hsl(155, 70%, 55%); $scs-lgtr: $success-lighter;
+// Sucess
+$success-darker : adjust($init-success, $lightness: -17%); $scs-drkr: $success-darker ;
+$success-dark   : adjust($init-success, $lightness: -8%) ; $scs-drk : $success-dark   ;
+$success        : $init-success                          ; $scs     : $success        ;
+$success-light  : adjust($init-success, $lightness:  6%) ; $scs-lgt : $success-light  ;
+$success-lighter: adjust($init-success, $lightness: 18%) ; $scs-lgtr: $success-lighter;
 
 // Sucess Map
 $success-map: (
@@ -140,11 +140,11 @@ $success-map: (
 );
 
 // Info
-$info-darker : hsl(190, 70%, 20%); $inf-drkr: $info-darker ;
-$info-dark   : hsl(190, 70%, 29%); $inf-drk : $info-dark   ;
-$info        : hsl(190, 70%, 37%); $inf     : $info        ;
-$info-light  : hsl(190, 70%, 43%); $inf-lgt : $info-light  ;
-$info-lighter: hsl(190, 70%, 55%); $inf-lgtr: $info-lighter;
+$info-darker : adjust($init-info, $lightness: -17%); $inf-drkr: $info-darker ;
+$info-dark   : adjust($init-info, $lightness: -8%) ; $inf-drk : $info-dark   ;
+$info        : $init-info                          ; $inf     : $info        ;
+$info-light  : adjust($init-info, $lightness:  6%) ; $inf-lgt : $info-light  ;
+$info-lighter: adjust($init-info, $lightness: 18%) ; $inf-lgtr: $info-lighter;
 
 // Info Map
 $info-map: (
@@ -156,11 +156,11 @@ $info-map: (
 );
 
 // Disabled
-$disabled-darker : hsl(200, 10%, 20%); $dis-drkr: $disabled-darker ;
-$disabled-dark   : hsl(200, 10%, 29%); $dis-drk : $disabled-dark   ;
-$disabled        : hsl(200, 10%, 37%); $dis     : $disabled        ;
-$disabled-light  : hsl(200, 10%, 43%); $dis-lgt : $disabled-light  ;
-$disabled-lighter: hsl(200, 10%, 55%); $dis-lgtr: $disabled-lighter;
+$disabled-darker : adjust($init-disabled, $lightness: -17%); $dis-drkr: $disabled-darker ;
+$disabled-dark   : adjust($init-disabled, $lightness: -8%) ; $dis-drk : $disabled-dark   ;
+$disabled        : $init-disabled                          ; $dis     : $disabled        ;
+$disabled-light  : adjust($init-disabled, $lightness:  6%) ; $dis-lgt : $disabled-light  ;
+$disabled-lighter: adjust($init-disabled, $lightness: 18%) ; $dis-lgtr: $disabled-lighter;
 
 // Disabled Map
 $disabled-map: (
@@ -170,4 +170,3 @@ $disabled-map: (
     disabled-light  : $dis-lgt ,
     disabled-lighter: $dis-lgtr,
 );
-

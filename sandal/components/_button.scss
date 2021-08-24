@@ -1,34 +1,7 @@
-@use "../utils" as *;
 @use "../config" as *;
+@use "../utils" as *;
 
 $radius: Map-Deep-Search($settings, "border-radius");
-
-%common {
-    letter-spacing: 0.05rem;
-    font-weight: bold;
-    border-radius: $radius;
-    transition: background-color .25s, color .25s;
-}
-
-// Common Variables
-$_sizes: (
-    large: (
-        padding: 1rem 2rem,
-        font-size: 2rem,
-        font-weight: bold,
-    ),
-    medium: (
-        padding: .75rem 1.5rem,
-        font-size: 1.25rem,
-        font-weight: bold,
-    ),
-    small: (
-        padding: .5rem 1rem,
-        font-size: 0.85rem,
-        font-weight: normal,
-    ),
-);
-
 
 /// A button for all your button needs
 /// @param {string} $type [secondary] - The type of button as per the theme sheet
@@ -41,15 +14,14 @@ $_sizes: (
 ) {
     $type-checked: Check-Types(($type, "string"), ($size, ("string", "percent")), ($outline, "bool"));
 
-    @if Includes($_sizes, $size) {
-        @each $key, $val in map-get($_sizes, $size) {
-            #{$key}: $val;
-        }
-    } @else {
-        
-    }
+    width: $size;
 
-    @extend %common;
+    font-size: 1.25rem;
+    padding: .75rem 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
+    transition: background-color .25s, color .25s;
+    border-radius: $radius;
 
     @if $outline {
         border: .19rem Theme("#{$type}-light") solid;
