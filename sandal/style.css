@@ -291,19 +291,19 @@ body > div {
 body > div:nth-of-type(1) button:nth-of-type(1) {
   min-width: 15rem;
   min-height: 4rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
+  color: #e6e7ea;
   background-color: #50636d;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(1) button:nth-of-type(1):hover {
   background-color: #5d737e;
-  color: #191b1f;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(1) button:nth-of-type(2) {
   min-width: 8rem;
@@ -314,13 +314,13 @@ body > div:nth-of-type(1) button:nth-of-type(2) {
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
+  color: #e6e7ea;
   background-color: #50636d;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(1) button:nth-of-type(2):hover {
   background-color: #5d737e;
-  color: #191b1f;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(1) button:nth-of-type(3) {
   min-width: 5rem;
@@ -331,115 +331,132 @@ body > div:nth-of-type(1) button:nth-of-type(3) {
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
+  color: #e6e7ea;
   background-color: #50636d;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(1) button:nth-of-type(3):hover {
   background-color: #5d737e;
-  color: #191b1f;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(1) button:nth-of-type(4) {
-  min-width: 0.6rem;
-  min-height: 0.4rem;
-  font-size: 0.1rem;
+  min-width: 1.8rem;
+  min-height: 0.7rem;
+  font-size: 0.35rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
+  color: #e6e7ea;
   background-color: #50636d;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(1) button:nth-of-type(4):hover {
   background-color: #5d737e;
-  color: #191b1f;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(2) button:nth-of-type(1) {
-  min-width: 5.4rem;
-  min-height: 1.6rem;
-  font-size: 0.9rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #1c74a0;
+  color: #e6e7ea;
+  background-color: #267197;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(2) button:nth-of-type(1):hover {
-  background-color: #2187ba;
-  color: #191b1f;
+  background-color: #2c84af;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(2) button:nth-of-type(2) {
-  min-width: 7.8rem;
-  min-height: 2.2rem;
-  font-size: 1.3rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #ba212e;
+  color: #e6e7ea;
+  background-color: #af2c37;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(2) button:nth-of-type(2):hover {
-  background-color: #d42534;
-  color: #191b1f;
+  background-color: #c8323e;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(2) button:nth-of-type(3) {
-  min-width: 10.2rem;
-  min-height: 2.8rem;
-  font-size: 1.7rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #daaf2f;
+  color: #e6e7ea;
+  background-color: #cea93b;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(2) button:nth-of-type(3):hover {
-  background-color: #dfb949;
-  color: #191b1f;
+  background-color: #d4b454;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(2) button:nth-of-type(4) {
-  min-width: 12.6rem;
-  min-height: 3.4rem;
-  font-size: 2.1rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #1c8aa0;
+  color: #e6e7ea;
+  background-color: #268497;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(2) button:nth-of-type(4):hover {
-  background-color: #21a1ba;
-  color: #191b1f;
+  background-color: #2c9aaf;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(2) button:nth-of-type(5) {
-  min-width: 15rem;
-  min-height: 4rem;
-  font-size: 2.5rem;
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #1ca069;
+  color: #e6e7ea;
+  background-color: #269768;
   border: transparent solid 0.19rem;
 }
 body > div:nth-of-type(2) button:nth-of-type(5):hover {
-  background-color: #21ba7a;
-  color: #191b1f;
+  background-color: #2caf79;
+  color: #e6e7ea;
+}
+body > div:nth-of-type(2) button:nth-of-type(6) {
+  min-width: 8rem;
+  min-height: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+  transition: background-color 0.25s, color 0.25s;
+  border-radius: 0.5rem;
+  color: #e6e7ea;
+  background-color: #686f73;
+  border: transparent solid 0.19rem;
+}
+body > div:nth-of-type(2) button:nth-of-type(6):hover {
+  background-color: #777f83;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(3) button:nth-of-type(1) {
   min-width: 12.5rem;
@@ -452,12 +469,12 @@ body > div:nth-of-type(3) button:nth-of-type(1) {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #1c74a0 solid 0.19rem;
-  color: #1c74a0;
+  border: #267197 solid 0.19rem;
+  color: #267197;
 }
 body > div:nth-of-type(3) button:nth-of-type(1):hover {
-  background-color: #2187ba;
-  color: #191b1f;
+  background-color: #2c84af;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(3) button:nth-of-type(2) {
   min-width: 8rem;
@@ -470,12 +487,12 @@ body > div:nth-of-type(3) button:nth-of-type(2) {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #ba212e solid 0.19rem;
-  color: #ba212e;
+  border: #af2c37 solid 0.19rem;
+  color: #af2c37;
 }
 body > div:nth-of-type(3) button:nth-of-type(2):hover {
-  background-color: #d42534;
-  color: #191b1f;
+  background-color: #c8323e;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(3) button:nth-of-type(3) {
   min-width: 5rem;
@@ -488,12 +505,12 @@ body > div:nth-of-type(3) button:nth-of-type(3) {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #daaf2f solid 0.19rem;
-  color: #daaf2f;
+  border: #cea93b solid 0.19rem;
+  color: #cea93b;
 }
 body > div:nth-of-type(3) button:nth-of-type(3):hover {
-  background-color: #dfb949;
-  color: #191b1f;
+  background-color: #d4b454;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(3) button:nth-of-type(4) {
   min-width: 8rem;
@@ -506,12 +523,12 @@ body > div:nth-of-type(3) button:nth-of-type(4) {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #1c8aa0 solid 0.19rem;
-  color: #1c8aa0;
+  border: #268497 solid 0.19rem;
+  color: #268497;
 }
 body > div:nth-of-type(3) button:nth-of-type(4):hover {
-  background-color: #21a1ba;
-  color: #191b1f;
+  background-color: #2c9aaf;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(3) button:nth-of-type(5) {
   min-width: 12.5rem;
@@ -524,12 +541,12 @@ body > div:nth-of-type(3) button:nth-of-type(5) {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #1ca069 solid 0.19rem;
-  color: #1ca069;
+  border: #269768 solid 0.19rem;
+  color: #269768;
 }
 body > div:nth-of-type(3) button:nth-of-type(5):hover {
-  background-color: #21ba7a;
-  color: #191b1f;
+  background-color: #2caf79;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(4) div:nth-of-type(1) {
   display: flex;
@@ -543,20 +560,21 @@ body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(1) {
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(1) > * {
   min-width: 4.8rem;
   min-height: 1.45rem;
-  font-size: 0.8rem;
+  font-size: 0.725rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: rgba(0, 0, 0, 0);
+  color: #e6e7ea;
+  background-color: #267197;
   border: transparent solid 0.19rem;
   border-radius: 0;
   border-width: 0.095rem 0.19rem;
 }
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(1) > *:hover {
-  color: #191b1f;
+  background-color: #2c84af;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(1) > *:nth-of-type(1) {
   border-top-left-radius: 0.5rem;
@@ -577,7 +595,7 @@ body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(2) {
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(2) > * {
   min-width: 4.8rem;
   min-height: 1.45rem;
-  font-size: 0.8rem;
+  font-size: 0.725rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
@@ -585,14 +603,14 @@ body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(2) > * {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #1c74a0 solid 0.19rem;
-  color: #1c74a0;
+  border: #267197 solid 0.19rem;
+  color: #267197;
   border-radius: 0;
   border-width: 0.095rem 0.19rem;
 }
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(2) > *:hover {
-  background-color: #2187ba;
-  color: #191b1f;
+  background-color: #2c84af;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(4) div:nth-of-type(1) div:nth-of-type(2) > *:nth-of-type(1) {
   border-top-left-radius: 0.5rem;
@@ -613,21 +631,21 @@ body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(1) {
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(1) > * {
   min-width: 9rem;
   min-height: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
   transition: background-color 0.25s, color 0.25s;
   border-radius: 0.5rem;
-  color: #191b1f;
-  background-color: #ba212e;
+  color: #e6e7ea;
+  background-color: #af2c37;
   border: transparent solid 0.19rem;
   border-radius: 0;
   border-width: 0.19rem 0.095rem;
 }
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(1) > *:hover {
-  background-color: #d42534;
-  color: #191b1f;
+  background-color: #c8323e;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(1) > *:nth-of-type(1) {
   border-top-left-radius: 0.5rem;
@@ -648,7 +666,7 @@ body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) {
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) > * {
   min-width: 9rem;
   min-height: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0.5rem;
   font-weight: bold;
   letter-spacing: 0.05rem;
@@ -656,14 +674,14 @@ body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) > * {
   border-radius: 0.5rem;
   background-color: transparent;
   box-sizing: border-box;
-  border: #ba212e solid 0.19rem;
-  color: #ba212e;
+  border: #af2c37 solid 0.19rem;
+  color: #af2c37;
   border-radius: 0;
   border-width: 0.19rem 0.095rem;
 }
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) > *:hover {
-  background-color: #d42534;
-  color: #191b1f;
+  background-color: #c8323e;
+  color: #e6e7ea;
 }
 body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) > *:nth-of-type(1) {
   border-top-left-radius: 0.5rem;

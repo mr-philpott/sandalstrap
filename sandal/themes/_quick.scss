@@ -76,9 +76,10 @@ $background-map: (
 );
 
 // Text
-$text-dark : adjust($init-text, $lightness: -5%); $txt-drk: $text-dark ;
+
+$text-dark : adjust($init-text, $lightness: -85%); $txt-drk: $text-dark ;
 $text      : $init-text                         ; $txt    : $text      ;
-$text-light: adjust($init-text, $lightness: 5%) ; $txt-lgt: $text-light;
+$text-light: adjust($init-text, $lightness: 85%) ; $txt-lgt: $text-light;
 
 // Text Map
 $text-map: (

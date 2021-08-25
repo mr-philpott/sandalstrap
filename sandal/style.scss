@@ -23,7 +23,7 @@ body {
                     @include Button($size: "small");
                 }
                 &:nth-of-type(4) {
-                    @include Button($size: -20%);
+                    @include Button($size: -10%);
                 }
             }
         }
@@ -31,19 +31,22 @@ body {
         &:nth-of-type(2) {
             button {
                 &:nth-of-type(1) {
-                    @include Button("primary", 20%);
+                    @include Button("primary");
                 }
                 &:nth-of-type(2) {
-                    @include Button("error", 40%);
+                    @include Button("error");
                 }
                 &:nth-of-type(3) {
-                    @include Button("warning", 60%);
+                    @include Button("warning");
                 }
                 &:nth-of-type(4) {
-                    @include Button("info", 80%);
+                    @include Button("info");
                 }
                 &:nth-of-type(5) {
-                    @include Button("success", 100%);
+                    @include Button("success");
+                }
+                &:nth-of-type(6) {
+                    @include Button("disabled");
                 }
             }
         }
@@ -72,7 +75,7 @@ body {
             div:nth-of-type(1) {
                 display: flex;
                 div:nth-of-type(1) {
-                    @include Button-Toolbar(column, ("clear", 15%, false));
+                    @include Button-Toolbar(column, ("primary", 15%, false));
                 }
                 div:nth-of-type(2) {
                     @include Button-Toolbar(column, ("primary", 15%, true));

@@ -11,7 +11,7 @@ $settings: (
     /// @prop {map} quick-theme - The styles if the base theme is quick
     styles: (
         base-theme: "quick",
-        border-radius: .5rem,
+        border-radius: .5rem,   
 
         /// @name quick-theme
         /// @prop {color} primary - The primary color for the quick theme
@@ -24,15 +24,15 @@ $settings: (
         /// @prop {color} info - The info color for the quick theme
         /// @prop {color} disabled - The disabled color for the quick theme
         quick-theme: (
-            primary:    hsl(200, 70%, 37%),
+            primary:    hsl(200, 60%, 37%),
             secondary:  hsl(200, 15%, 37%),
             background: hsl( 50, 40%, 95%),
             text:       hsl(225, 10%,  6%),
-            error:      hsl(355, 70%, 43%),
-            warning:    hsl( 45, 70%, 52%),
-            success:    hsl(155, 70%, 37%),
-            info:       hsl(190, 70%, 37%),
-            disabled:   hsl(200, 10%, 37%),
+            error:      hsl(355, 60%, 43%),
+            warning:    hsl( 45, 60%, 52%),
+            success:    hsl(155, 60%, 37%),
+            info:       hsl(190, 60%, 37%),
+            disabled:   hsl(200,  5%, 43%),
         )
     ),
 );

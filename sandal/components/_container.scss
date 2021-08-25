@@ -1,0 +1,10 @@
+@use "../config" as *;
+@use "../utils" as *;   
+
+/// A button for all your button needs
+/// @param {string} $type [flex] - The type of container being used
+@mixin Container($type: flex) {
+    $type-checked: Check-Types(($type, "string"));
+
+    @content;
+}
