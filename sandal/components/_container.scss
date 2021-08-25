@@ -6,5 +6,29 @@
 @mixin Container($type: flex) {
     $type-checked: Check-Types(($type, "string"));
 
-    @content;
 }
+
+@mixin Layout() {
+    
+}
+
+@mixin Row {
+    display: grid;
+
+}
+
+@mixin Cell($row, $col) {
+    grid-row: $row;
+    grid-column: $col;
+}
+
+@include Layout(
+    
+);
+
+@include Complex-Layout((
+    (1, 1, 1),
+    (3, 2, 5),
+    (3, 2, 5),
+    (4, 4, 4),
+), ("nav", "main", "aside", "footer", "aside"));
