@@ -19,26 +19,6 @@ $layers: (
     }
 }
 
-
-
-// Includes
-@function Includes($obj, $find) {
-    @if Is-List($obj) {
-        @each $item in $obj {
-            @if $item == $find {
-                @return true;
-            }
-        }
-    } @else if Is-Map($obj) {
-        @each $item in map-keys($obj) {
-            @if $item == $find {
-                @return true;
-            }
-        }
-    }
-    @return false
-};
-
 // Lerp
 @function Lerp($min, $max, $amt) {
     $type-checked: Check-Types(($min, "length"), ($max, "length"), ($amt, "number"));

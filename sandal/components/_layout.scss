@@ -1,0 +1,186 @@
+@use "../config" as *;
+@use "../utils" as *;   
+
+@mixin Layout($grid, $sizes: null) {
+    display: grid;
+
+    // Minifies the grid if aplicable
+
+    // Finds the rows to remove
+    $prev-row: null;
+    $remove-rows: ();
+    @for $y from 1 through length($grid) {
+        $is-unique: false;
+        $temp-row: ();
+        @for $x from 1 through length(nth($grid, 1)) {
+            @if $prev-row and nth($prev-row, $x) != nth(nth($grid, $y), $x) {
+                $is-unique: true;
+            }
+            $temp-row: append($temp-row, nth(nth($grid, $y), $x));
+        }
+        @if not $is-unique and $prev-row {
+            $remove-rows: append($remove-rows, $y);
+        }
+        $prev-row: $temp-row;
+    }
+
+    // Finds the columns to remove
+    $prev-col: null;
+    $remove-cols: ();
+    @for $x from 1 through length(nth($grid, 1)) {
+        $is-unique: false;
+        $temp-col: ();
+        @for $y from 1 through length($grid) {
+            @if $prev-col and nth($prev-col, $y) != nth(nth($grid, $y), $x) {
+                $is-unique: true;
+            }
+            $temp-col: append($temp-col, nth(nth($grid, $y), $x));
+        }
+        @if not $is-unique and $prev-col {
+            $remove-cols: append($remove-cols, $x);
+        }
+        $prev-col: $temp-col;
+    }
+
+    // Removes Rows and columns
+    $new-grid: ();
+
+    @for $y from 1 through length($grid) {
+        @if not index($remove-rows, $y) {
+            $new-grid: append($new-grid, nth($grid, $y));
+        }
+    }
+
+    @error $new-grid;
+
+    @for $x from 1 through length(nth($new-grid, 1)) {
+        @if index($remove-cols, $x) {
+            $temp: ();
+            @each $val in $new-grid {
+                @if nth($val, $x) != nth($remove-cols, index($remove-cols, $x)) {
+                    $temp: append($temp, $nth($val, $x))
+                }
+            }
+            $new-grid: set-nth(nth($new-grid, $x), $x, $temp);
+        }
+    }
+
+    @error $new-grid;
+
+    // Sets template rows and columns
+
+    // Rows
+    $run: "";
+    @for $row from 1 through length($grid) {
+        @if 2 == length($sizes) and $row <= length(nth($sizes, 1)) {
+            $run: $run + nth(nth($sizes, 1), $row) + " ";
+        } @else {
+            $run: $run + 1fr + " ";
+        }
+    }
+    grid-template-rows: #{$run};
+
+    // Columns
+    $run: "";
+    @for $col from 1 through length(nth($grid, 1)) {
+        @if 2 == length($sizes) and $col <= length(nth($sizes, 2)) {
+            $run: $run + nth(nth($sizes, 2), $col) + " ";
+        } @else {
+            $run: $run + 1fr + " ";
+        }
+    }
+    grid-template-columns: #{$run};
+
+    // Finds the selectors
+    $selectors: ();
+    @for $y from 1 through length($grid) {
+        @for $x from 1 through length(nth($grid, $y)) {
+            $curr: nth(nth($grid, $y), $x);
+            @if $curr != null and not index($selectors, $curr) {
+                $selectors: append($selectors, $curr);
+            }
+        };
+    };
+
+    @each $selector in $selectors {
+        $smallest-x: length(nth($grid, 1));
+        $greatest-x: 0;
+        $smallest-y: length($grid);
+        $greatest-y: 0;
+        @for $y from 1 through length($grid) {
+            @for $x from 1 through length(nth($grid, $y)) {
+                @if nth(nth($grid, $y), $x) == $selector {
+                    @if $smallest-x > $x {
+                        $smallest-x: $x;
+                    }
+                    @if $greatest-x < $x {
+                        $greatest-x: $x;
+                    }
+                    @if $smallest-y > $y {
+                        $smallest-y: $y;
+                    }
+                    @if $greatest-y < $y {
+                        $greatest-y: $y;
+                    }
+                };
+            };
+        };
+
+        // Checks if the selectors are in a rectangle formation
+        @for $y from $smallest-y through $greatest-y {
+            @for $x from $smallest-x through $greatest-x {
+                @if nth(nth($grid, $y), $x) != $selector {
+                    @error "Grid Layout Error: The provided grid's '#{$grid}' values must be in rectangles. The value #{$selector} does not comply with this rule"
+                };
+            };
+        };
+
+        & #{$selector} {
+            grid-column: #{$smallest-x} / #{$greatest-x + 1};
+            grid-row: #{$smallest-y} / #{$greatest-y + 1};
+        }
+    }
+};
+
+body {
+    @include Layout((
+        (nav, nav, nav, nav),
+        (null, main, main, aside),
+        (null, main, main, aside),
+        (footer, footer, footer, footer),
+        (footer, footer, footer, footer)
+    ));
+
+    nav {
+        background-color: blue;
+    }
+
+    aside {
+        background-color: yellow;
+    }
+
+    footer {
+        background-color: orange;
+    }
+
+    main {
+        @include Layout((
+            (header, ".ads"),
+            (article, ".ads"),
+        ));
+        
+        background-color: purple;
+            
+        header {
+            background-color: red;
+        }
+
+        article {
+            background-color: cyan;
+        }
+
+        .ads {
+            background-color: violet;
+        }
+    }
+}
