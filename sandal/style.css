@@ -692,4 +692,8 @@ body > div:nth-of-type(4) div:nth-of-type(2) div:nth-of-type(2) > *:nth-last-of-
   border-bottom-right-radius: 0.5rem;
   border-right-width: 0.19rem;
   border-top-right-radius: 0.5rem;
+}
+body > div:nth-of-type(3) {
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }/*# sourceMappingURL=style.css.map */
